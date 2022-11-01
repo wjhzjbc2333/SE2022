@@ -10,4 +10,4 @@ judge.o:judge.cpp
 	g++ -c -o judge.o judge.cpp
 clean:
 	-rm *.o
-
+	-rm main
