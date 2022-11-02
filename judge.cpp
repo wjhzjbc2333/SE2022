@@ -41,8 +41,6 @@ void Judge::compare(Output &output){
         }
 		string rmv2 = path + "temp1.out";remove(rmv2.c_str());
 		string rmv3 = path + "temp2.out";remove(rmv3.c_str());
-		//string rmv4 = path + "output1.txt";remove(rmv4.c_str());
-		//string rmv5 = path + "output2.txt";remove(rmv5.c_str());
 		string rmv6 = path + "compile1.txt";remove(rmv6.c_str());
 		string rmv7 = path + "compile2.txt";remove(rmv7.c_str());
 		fileName.clear();
