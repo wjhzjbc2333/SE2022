@@ -1,9 +1,11 @@
 #include"output.h"
 Output::Output(string s) {
 	path = s;
+	string mkdir = "cd " + s + " && mkdir output";
+	system(mkdir.c_str());
 	ofstream out1, out2;
-	string path1 = s + "equal.csv";
-	string path2 = s + "inequal.csv";
+	string path1 = s + "output/equal.csv";
+	string path2 = s + "output/inequal.csv";
 	out1.open(path1.c_str(), ios::out);
 	out2.open(path2.c_str(), ios::out);
 	if (!out1 || !out2) {
@@ -22,11 +24,11 @@ void Output::outputToFile(string s1, string s2, bool equal) {
 	ofstream out;
 	string temp = path;
 	if (equal) {
-		temp += "equal.csv";
+		temp += "output/equal.csv";
 		out.open(temp.c_str(), ios::app);
 	}
 	else {
-		temp += "inequal.csv";
+		temp += "output/inequal.csv";
 		out.open(temp.c_str(), ios::app);
 	}
 	if (!out) {
